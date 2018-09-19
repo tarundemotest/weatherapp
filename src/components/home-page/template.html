@@ -1,0 +1,9 @@
+<div>
+  <div id="today" class="mb-4 h5">{{ formattedDate }}</div>
+
+  <div class="row">
+    <div class="col col-12 col-sm-6 col-md-4 col-lg-3 mb-4" v-for="weather in weathers">
+      <weather :weather="weather" :date="date" ref="weather" @click="weatherClick"></weather>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<div>
+
+  <div v-if="!loading">
+
+    <div v-if="weathers.length">
+
+      <div id="today" class="mb-4 h5">{{ formattedDate }}</div>
+
+      <div class="row">
+        <div class="col col-12 col-sm-6 col-md-4 col-lg-3 mb-4" v-for="weather in weathers">
+          <weather :weather="weather" :date="date" ref="weather" @click="weatherClick"></weather>
+        </div>
+      </div>
+
+    </div>
+
+    <div v-else>No results were found. Try changing the keyword!</div>
+
+  </div>
+
+  <div v-else>
+    <i class="fa fa-spin fa-refresh"></i> Searching City Weather...
+  </div>
+
+</div>

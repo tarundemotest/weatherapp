@@ -1,0 +1,26 @@
+<div class="card weather-card" @click="click">
+  <div class="card-body">
+    <div class="city-name mb-3" style="text-align: center"><b>{{ weather.title }}</b></div>
+
+
+
+    <div class="small" style="text-align: center">
+      Temperature: {{ Math.round(showWeather.the_temp) }}°C<br>
+      Maximum : {{ Math.round(showWeather.max_temp) }}°C<br>
+      Minimum : {{ Math.round(showWeather.min_temp) }}°C<br>
+    </div>
+
+
+    <div class="form-row mb-2">
+      <div class="col-xl-12"  style="text-align: center">
+        <img v-bind:src="icon(showWeather)" class="weather-icon" style="margin: auto">
+      </div>
+      <div class="col-xl-12" style="text-align: center">{{ showWeather.weather_state_name }}</div>
+    </div>
+
+  <br>
+<div style="text-align: center">
+  <button class="btn btn-sm btn-primary">Show Details</button>
+</div>
+  </div>
+</div>

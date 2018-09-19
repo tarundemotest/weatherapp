@@ -1,0 +1,93 @@
+@import "bootstrap-4/bootstrap";
+
+body {
+}
+
+#header {
+  border-bottom: 1px solid $hr-border-color;
+  height: 100px;
+  margin-bottom: 30px;
+  .brand {
+    color: $body-color;
+    font-weight: 500;
+    font-size: 20px;
+    &:hover, &:focus, &:active {
+      text-decoration: none;
+    }
+    &:hover, &:active {
+      opacity: 0.8;
+    }
+  }
+}
+
+.weather-icon {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  display: block;
+}
+
+.weather-table {
+  th {
+    font-weight: 500;
+  }
+}
+
+.weather-card {
+  cursor: pointer;
+}
+
+.wind {
+  .dir {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background: url(https://www.metaweather.com/static/img/windarrow.svg);
+    background-size: 100% 100%;
+    vertical-align: middle;
+    &-nne { transform: rotate(22.5deg) }
+    &-ne { transform: rotate(45deg) }
+    &-ene { transform: rotate(67.5deg) }
+    &-e { transform: rotate(90deg) }
+    &-ese { transform: rotate(112.5deg) }
+    &-se { transform: rotate(135deg) }
+    &-sse { transform: rotate(157.5deg) }
+    &-s { transform: rotate(180deg) }
+    &-ssw { transform: rotate(202.5deg) }
+    &-sw { transform: rotate(225deg) }
+    &-wsw { transform: rotate(247.5deg) }
+    &-w { transform: rotate(270deg) }
+    &-wnw { transform: rotate(292.5deg) }
+    &-nw { transform: rotate(315deg) }
+    &-nnw { transform: rotate(337.5deg) }
+  }
+}
+
+.today-item {
+  outline: 1px solid palevioletred;
+  outline-offset: 5px;
+}
+
+.search-form {
+  position: relative;
+  [type=submit] {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+    background: 0;
+    outline: 0;
+    border: 0;
+    padding: 0;
+    color: $gray-500;
+    cursor: pointer;
+    &:hover {
+      color: $gray-700;
+    }
+  }
+}
+
+[v-cloak] {
+  visibility: hidden;
+  pointer-events: none;
+}
